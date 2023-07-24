@@ -1,44 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 body{
     display: flex;
-    background-color: gray;
+    background-color: white;
     justify-content: center;
 }
 
 form{
     background-color: hsl(0, 0%, 100%);
+    box-shadow: 10px 10px 10px hsla(224, 30%, 27%, 0.2);
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    margin-top: 15em;
-    width: 30em;
+    margin-top: 10em;
+    width: 40em;
     height: auto;
 }
 
 #column-1{
-    background-color: hsl(252, 100%, 67%);
-    width: 15em;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 20em;
     border-radius: 10px;
 }
 
 #column-1 h1{
     color: hsl(221, 100%, 96%);
     font-size: 1.5em;
-    margin-left: 2em;
+    margin-left: 4em;
     margin-top: 0.5em;
 }
 
 #circle{
-    background-color: red;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     color: hsl(241, 100%, 89%);
     width: 10em;
     height: 10em;
-    margin-left: 2.5em;
+    margin-left: 5em;
     margin-top: 2em;
     padding-top: 2em;
     text-align: center;
@@ -56,7 +60,7 @@ form{
     color: hsl(0, 0%, 100%);
     width: 3em;
     margin: 1em;
-    margin-left: 3.5em;
+    margin-left: 5em;
 }
 
 #column-1 p{
@@ -64,12 +68,13 @@ form{
     text-align: center;
     /* background-color: red; */
     width: 13em;
-    margin-left: 1em;
+    margin-left: 2.5em;
+    font-size: 18px;
 }
 
 #column-2{
     background-color: hsl(0, 0%, 100%);
-    width: 15em;
+    width: 20em;
     justify-content: center;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -87,28 +92,32 @@ form{
     margin: 1em;
     border-radius: 10px;
     /* display: inline-block; */
-    width: 13em;
+    width: 18em;
+    display: flex;
+    flex-direction: row;
 }
 
 #score{
     font-weight: bolder;
     color: black;
     width: 1em;
-    margin: 0;
-    padding: 0;
+    margin-left: 5.5em;
 }
 
 #column-2 #image{
     vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+#column-2 span{
+    color: hsla(224, 30%, 27%, 0.5);
+    margin-left: 0.5em;
+    align-self: end;
 }
 
 #column-2 #reaction{
     background-color: hsla(0, 100%, 67%, 0.2);
     color: hsl(0, 100%, 67%);
-}
-
-#column-2 span{
-    color: hsla(224, 30%, 27%, 0.5);
 }
 
 #column-2 #memory{
@@ -131,8 +140,29 @@ form{
     color: hsl(0, 0%, 100%);
     margin: 1em;
     margin-left: 1.2em;
-    width: 15.5em;
+    width: 21.5em;
     height: 3em;
     border-radius: 10px;
     border: none;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+#column-2 button:hover{
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (min-width: 375px){
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #column-1{
+        width: 23.5em;
+    }
+
+    #column-2{
+        width: 23.5em;
+    }
 }
