@@ -112,7 +112,6 @@ form{
 #column-2 span{
     color: hsla(224, 30%, 27%, 0.5);
     margin-left: 0.5em;
-    align-self: end;
 }
 
 #column-2 #reaction{
@@ -125,14 +124,26 @@ form{
     color: hsl(39, 100%, 56%);
 }
 
+#column-2 #memory #score{
+    margin-left: 5.7em;
+}
+
 #column-2 #verbal{
     background-color: hsla(166, 100%, 37%, 0.2);
     color: hsl(166, 100%, 37%);
 }
 
+#column-2 #verbal #score{
+    margin-left: 6.5em;
+}
+
 #column-2 #visual{
     background-color: hsla(234, 85%, 45%, 0.2);
     color: hsl(234, 85%, 45%);
+}
+
+#column-2 #visual #score{
+    margin-left: 6.8em;
 }
 
 #column-2 button{
@@ -152,17 +163,26 @@ form{
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
-@media (min-width: 375px){
+@media (max-width: 500px){
     form{
         display: flex;
         flex-direction: column;
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     #column-1{
         width: 23.5em;
+        padding-left: 1em;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding-bottom: 2em;
     }
 
     #column-2{
         width: 23.5em;
+        padding-left: 1em;
+        padding-bottom: 2em;
     }
 }
